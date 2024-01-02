@@ -1,0 +1,23 @@
+score = []
+ans = 0
+index = 0
+
+for i in range(10):
+    score.append(int(input()))
+
+while index <= 9 :
+    ans += score[index]
+    
+    if (ans == 100) :
+        print(ans)
+        break
+    elif (ans > 100) :
+        if (ans-100 > 100-(ans-score[index])):
+            print(ans-score[index])
+        else:
+            print(ans)
+        break
+    index+=1
+    
+if (ans <100):
+    print(ans)
